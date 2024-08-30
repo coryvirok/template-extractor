@@ -10,39 +10,10 @@ export default tsEslint.config(
     files: ['**/*.{ts,js,cjs,mjs}'],
     rules: {
       'object-shorthand': ['warn', 'always'],
+      'no-unreachable': 'error',
     },
+  },
+  {
+    ignores: ['dist/*'],
   }
 )
-
-/** @type { import("eslint").Linter.Config } */
-// export default [
-//   {
-//     languageOptions: {
-//       parser: ts
-//     },
-//   extends: [
-//     'eslint:recommended',
-//     'plugin:@typescript-eslint/recommended',
-//     'prettier',
-//   ],
-//   parser: '@typescript-eslint/parser',
-//   plugins: ['@typescript-eslint'],
-//   parserOptions: {
-//     sourceType: 'module',
-//     ecmaVersion: 2020
-//   },
-//   env: {
-//     browser: true,
-//     es2017: true,
-//     node: true,
-//   },
-//   overrides: [
-//     {
-//       files: ['**/*.{ts,js,cjs,mjs}'],
-//       rules: {
-//         'object-shorthand': ['warn', 'always'],
-//       },
-//     },
-//   ],
-//   }
-// ]
