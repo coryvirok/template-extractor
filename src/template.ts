@@ -154,8 +154,7 @@ export class Template {
   private flattenParams(params: NodeParams) {
     const flattenedParams: string[] = []
 
-    const sortedAttrs = Array.from(params.attrs.keys()).sort()
-    for (const attr of sortedAttrs) {
+    for (const attr of this.sortedAttrs) {
       const val = params.attrs.get(attr) as string
       if (!this.attributes.get(attr)?.inline) {
         flattenedParams.push(val)
