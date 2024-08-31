@@ -1,8 +1,11 @@
 {
   "name": "@coryvirok/template-extractor",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "dist/cli.js",
+  "main": "dist/index.js",
+  "bin": {
+    "extract-template": "dist/cli.js"
+  },
   "scripts": {
     "build": "rimraf dist/; tsc",
     "test": "jest --verbose --",
